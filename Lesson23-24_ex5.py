@@ -32,7 +32,7 @@ cdf_low = scipy.stats.norm.cdf(x,
 
 # Plot data
 plt.plot(x_high, y_high, marker='.', linestyle='none',
-         markersize=20, alpha=0.5) # alpha modifies transparence
+         markersize=20, alpha=0.5) # alpha modifies transparency
 plt.plot(x_low, y_low, marker='.', linestyle='none',
          markersize=20, alpha=0.5)
 plt.plot(x, cdf_high, color='gray')
