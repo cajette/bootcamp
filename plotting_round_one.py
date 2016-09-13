@@ -26,12 +26,14 @@ _ = plt.hist(xa_high, normed=True, bins=bins, histtype='stepfilled', alpha=0.5)
 plt.xlabel('Cross-sectional area (µm$^2$)')
 plt.ylabel('count')
 plt.legend(('low concentration', 'high concentration'), loc='upper right')
-plt.show()
+#plt.show() note you don't actually have to show a plot to save it; if you close figure,
+#will save empty plot; put after save command so that it will open after it saves
 
 # Save the figure
-plt.savefig('egg_area_histograms.svg', bbox_inches='tight')
+#plt.savefig('egg_area_histograms.svg', bbox_inches='tight')
 
-
+plt.savefig('egg_pdf_test.pdf', bbox_inches='tight')
+plt.show()
 
 """
 # Plot the data as a histogram
