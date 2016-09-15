@@ -1,5 +1,11 @@
+"""
+Exercise 4
+making finch data tidy
+"""
+
 import pandas as pd
 import numpy as np
+import os
 
 #Import files into their own DataFrame
 
@@ -54,3 +60,15 @@ df_1991 = df_1991[['band', 'species', 'beak length (mm)', 'beak depth (mm)',
 
 df_2012 = df_2012[['band', 'species', 'beak length (mm)', 'beak depth (mm)',
                    'year']]
+
+
+# Concatenate the dataframes into a single dataframes
+df_grant = pd.concat((df_1973, df_1975, df_1987, df_1991, df_2012), ignore_index=True)
+# axis is row vs column
+#kwarg axis=0 is rows, axis=1 is column
+#for pd.concat function, tells it where the data will be added
+#goal is for index to be meaningful across the row (aka all the stuff applies to same trial/sample)
+
+# Save concatenated data as csv file
+os.path.isfile(df_grant.csv)
+df_grant.to_csv('df_grant.csv')
