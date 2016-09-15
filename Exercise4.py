@@ -1,6 +1,6 @@
 """
 Exercise 4
-making finch data tidy
+Part a, b
 """
 
 import pandas as pd
