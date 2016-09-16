@@ -40,7 +40,7 @@ with sns.axes_style('dark'):
     #this slices [y, x] cuz of how axes are set up
     plt.imshow(cfp_im[150:250, 450:550]/cfp_im.max(), cmap=plt.cm.viridis)
 
-# Generate a structural element.
+# Generate a structural element; remove hot pixels
 selem = skimage.morphology.square(3)
 cfp_filt = skimage.filters.median(cfp_im, selem)
 with sns.axes_style('dark'):
