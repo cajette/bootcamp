@@ -20,8 +20,14 @@ radius is radius used for your gaussian blur;
 cmap
 """
 
+"""
+to plot more than one graph at a time in the same window in matplotlib.py
 
+fig, ax = plt.subplots(2, 3, figsize=(9.5, 8))
+    ax[0,0].imshow(im....., cmap)...
+    ax[0, 1]
 
+"""
 #def boilerplate(image, radius, cmap=plt.cm.viridis):
 
 #image = 'data/HG105_images/noLac_FITC_0000.tif'
